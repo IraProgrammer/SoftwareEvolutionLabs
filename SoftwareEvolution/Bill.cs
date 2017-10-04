@@ -9,7 +9,6 @@ namespace SoftwareEvolution
         private List<Item> _items;
 
         private Customer _customer;
-        private Goods _goods;
         public Bill(Customer customer)
         {
             this._customer = customer;
@@ -49,11 +48,11 @@ namespace SoftwareEvolution
         public int GetUsedBonus(Item each)
         {
             int usedBonus = 0;
-            if ((each.getGoods().getPriceCode() ==
-              Goods.REGULAR) && each.getQuantity() > 5)
+            if ((each.getGoods().GetType() ==
+              typeof(RegularGoods)) && each.getQuantity() > 5)
                 usedBonus = _customer.useBonus((int)(each.GetSum() - each.GetBonus()));
-            if ((each.getGoods().getPriceCode() ==
-            Goods.SPECIAL_OFFER) && each.getQuantity() > 1)
+            if ((each.getGoods().GetType() ==
+              typeof(SpecialGoods)) && each.getQuantity() > 1)
                 usedBonus = _customer.useBonus((int)(each.GetSum() - each.GetDiscount()));
             return usedBonus;
         }

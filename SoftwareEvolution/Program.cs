@@ -38,20 +38,23 @@ namespace SoftwareEvolution
                 result = line.Split(':');
                 result = result[1].Trim().Split();
                 string type = result[1].Trim();
-                int t = 0;
+              //  int t = 0;
                 switch (type)
                 {
                     case "REG":
-                        t = Goods.REGULAR;
+                        g[i] = new RegularGoods(result[0]);
+                        //t = Goods.REGULAR;
                         break;
                     case "SAL":
-                        t = Goods.SALE;
+                        g[i] = new SaleGoods(result[0]);
+                        //t = Goods.SALE;
                         break;
                     case "SPO":
-                        t = Goods.SPECIAL_OFFER;
+                        g[i] = new SpecialGoods(result[0]);
+                        //t = Goods.SPECIAL_OFFER;
                         break;
                 }
-                g[i] = new Goods(result[0], t);
+               // g[i] = new Goods(result[0], t);
             }
             // read items count
         // Пропустить комментарии

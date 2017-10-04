@@ -14,7 +14,7 @@ namespace BillTests
         [Test]
         public void DiscountRegularLess2()
         {
-            Goods cola = new Goods("Cola", Goods.REGULAR);
+            Goods cola = new RegularGoods("Cola");
             Item i1 = new Item(cola, 1, 65);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
@@ -27,7 +27,7 @@ namespace BillTests
         [Test]
         public void DiscountRegularMore2()
         {
-            Goods cola = new Goods("Cola", Goods.REGULAR);
+            Goods cola = new RegularGoods("Cola");
             Item i1 = new Item(cola, 6, 65);
             Customer x = new Customer("test", 10);
             Bill b1 = new Bill(x);
@@ -40,7 +40,7 @@ namespace BillTests
         [Test]
         public void DiscountSaleLess3()
         {
-            Goods twix = new Goods("Twix", Goods.SALE);
+            Goods twix = new SaleGoods("Twix");
             Item i1 = new Item(twix, 2, 38);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
@@ -53,7 +53,7 @@ namespace BillTests
         [Test]
         public void DiscountSaleMore3()
         {
-            Goods twix = new Goods("Twix", Goods.SALE);
+            Goods twix = new SaleGoods("Twix");
             Item i1 = new Item(twix, 7, 38);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
@@ -66,7 +66,7 @@ namespace BillTests
         [Test]
         public void DiscountSpecialLess10()
         {
-            Goods bread = new Goods("Bread", Goods.SPECIAL_OFFER);
+            Goods bread = new SpecialGoods("Bread");
             Item i1 = new Item(bread, 8, 23);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
@@ -79,7 +79,7 @@ namespace BillTests
         [Test]
         public void DiscountSpecialMore10()
         {
-            Goods bread = new Goods("Bread", Goods.SPECIAL_OFFER);
+            Goods bread = new SpecialGoods("Bread");
             Item i1 = new Item(bread, 13, 23);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
@@ -92,7 +92,7 @@ namespace BillTests
         [Test]
         public void BonusRegular()
         {
-            Goods bonaqua = new Goods("BonAqua", Goods.REGULAR);
+            Goods bonaqua = new RegularGoods("BonAqua");
             Item i1 = new Item(bonaqua, 8, 40);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
@@ -105,7 +105,7 @@ namespace BillTests
         [Test]
         public void BonusSale()
         {
-            Goods doshirak = new Goods("Doshirak", Goods.SALE);
+            Goods doshirak = new SaleGoods("Doshirak");
             Item i1 = new Item(doshirak, 20, 36);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
@@ -118,7 +118,7 @@ namespace BillTests
         [Test]
         public void BonusSpecial()
         {
-            Goods lays = new Goods("Lays", Goods.SPECIAL_OFFER);
+            Goods lays = new SpecialGoods("Lays");
             Item i1 = new Item(lays, 2, 93);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
@@ -131,7 +131,7 @@ namespace BillTests
         [Test]
         public void UseBonusRegularLess5()
         {
-            Goods cola = new Goods("Cola", Goods.REGULAR);
+            Goods cola = new RegularGoods("Cola");
             Item i1 = new Item(cola, 1, 65);
             Customer x = new Customer("test", 20);
             Bill b1 = new Bill(x);
@@ -144,7 +144,7 @@ namespace BillTests
         [Test]
         public void UseBonusRegularMore5()
         {
-            Goods cola = new Goods("Cola", Goods.REGULAR);
+            Goods cola = new RegularGoods("Cola");
             Item i1 = new Item(cola, 6, 65);
             Customer x = new Customer("test", 30);
             Bill b1 = new Bill(x);
@@ -157,7 +157,7 @@ namespace BillTests
         [Test]
         public void UseBonusSaleMore1()
         {
-            Goods twix = new Goods("Twix", Goods.SALE);
+            Goods twix = new SaleGoods("Twix");
             Item i1 = new Item(twix, 7, 38);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
@@ -170,7 +170,7 @@ namespace BillTests
         [Test]
         public void UseBonusSpecial()
         {
-            Goods bread = new Goods("Bread", Goods.SPECIAL_OFFER);
+            Goods bread = new SpecialGoods("Bread");
             Item i1 = new Item(bread, 10, 23);
             Customer x = new Customer("test", 0);
             Bill b1 = new Bill(x);
