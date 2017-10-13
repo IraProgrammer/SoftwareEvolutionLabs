@@ -5,7 +5,7 @@ using System.Text;
 namespace SoftwareEvolution
 {
     // Класс, который представляет данные о товаре
-    public class Goods
+    public abstract class Goods
     {
         protected String _title;
         public Goods(String title)
@@ -24,14 +24,8 @@ namespace SoftwareEvolution
             return sum;
         }
 
-        virtual public double GetDiscount(Item each)
-        {
-            return 0;
-        }
+        abstract public double GetDiscount(Item each);
 
-        virtual public int GetBonus(Item each)
-        {
-            return 0;
-        }
+        abstract public int GetBonus(Item each);
     }
 }

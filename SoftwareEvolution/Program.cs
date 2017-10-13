@@ -22,7 +22,8 @@ namespace SoftwareEvolution
             result = line.Split(':');
             int bonus = Convert.ToInt32(result[1].Trim());
             Customer customer = new Customer(name, bonus);
-            Bill b = new Bill(customer);
+            IPresenter p = new HTMLPresenter();
+            Bill b = new Bill(customer, p);
             // read goods count
             line = sr.ReadLine();
             result = line.Split(':');
@@ -43,18 +44,14 @@ namespace SoftwareEvolution
                 {
                     case "REG":
                         g[i] = new RegularGoods(result[0]);
-                        //t = Goods.REGULAR;
                         break;
                     case "SAL":
                         g[i] = new SaleGoods(result[0]);
-                        //t = Goods.SALE;
                         break;
                     case "SPO":
                         g[i] = new SpecialGoods(result[0]);
-                        //t = Goods.SPECIAL_OFFER;
                         break;
                 }
-               // g[i] = new Goods(result[0], t);
             }
             // read items count
         // Пропустить комментарии
