@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractContentFile.cs" />
     <Compile Include="Bill.cs" />
+    <Compile Include="BillFactory.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Goods.cs" />
     <Compile Include="HTMLPresenter.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="SaleGoods.cs" />
     <Compile Include="SpecialGoods.cs" />
     <Compile Include="TXTPresenter.cs" />
+    <Compile Include="YAMLFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
